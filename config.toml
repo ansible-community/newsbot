@@ -1,0 +1,155 @@
+bot_user_id = '@newsbot:ansible.im'
+reporting_room_id = '!pMZboYFCScZJfXmOtH:ansible.im'
+admin_room_id = '!vErCYeanUGgAiJskEy:ansible.im'
+notice_emoji = '⭕'   # :o:
+restrict_notice = true
+verbs = ["shared", "said", "contributed"]
+ack_text = "✅ Hey {{user}}, thanks for your report! I'll store it safely for the next Bullhorn review!"
+# Messages shorter than this many UTF-8 bytes are ignored unless an editor accepts them with the notice reaction.
+min_length = 30
+update_config_command = "/usr/local/bin/update_config.sh"
+editors = [
+    '@gundalow:ansible.im',
+    '@gwmngilfen:ansible.im',
+    '@andersson007_:matrix.org',
+    '@orandon:ansible.im',
+    '@leo:ansible.im',
+    '@traytorous:ansible.im',
+    '@dbrenuk:matrix.org',
+    '@mchappell:matrix.org'
+]
+
+[[sections]]
+emoji = '⏱️' # :stopwatch:
+name = 'dates'
+title = 'Key dates'
+order = 100
+usual_reporters = []
+
+[[sections]]
+emoji = '🔈️' # :speaker:
+name = 'general'
+title = 'General news updates'
+order = 101
+usual_reporters = []
+
+[[sections]]
+emoji = '🏆️' # :trophy:
+name = 'releases'
+title = 'Major new releases'
+order = 102
+usual_reporters = []
+
+[[sections]]
+emoji = '🛠️' # :hammer_and_wrench:
+name = 'projects'
+title = 'Project updates'
+order = 103
+usual_reporters = []
+
+[[sections]]
+emoji = '🪄' # :magic_wand:
+name = 'collections'
+title = 'Collection updates'
+order = 104
+usual_reporters = [
+    '@ssulliva:matrix.org'
+]
+
+[[sections]]
+emoji = '🙏' # :pray:
+name = 'help'
+title = 'Help wanted'
+order = 105
+usual_reporters = []
+
+[[sections]]
+emoji = '🗳️' # :ballot_box:
+name = 'proposals'
+title = 'Proposals - discuss and vote!'
+order = 106
+usual_reporters = []
+
+[[sections]]
+emoji = '👂️' # :ear:
+name = 'community'
+title = 'Community updates'
+order = 107
+usual_reporters = []
+
+[[sections]]
+emoji = '📅' # :date:
+name = 'events'
+title = 'Community events and meetups'
+order = 108
+usual_reporters = []
+
+[[sections]]
+emoji = '💰️' # :moneybag:
+name = 'hiring'
+title = 'The Ansible team is hiring!'
+order = 109
+usual_reporters = []
+
+[[projects]]
+emoji = 'AWX'
+name = 'AWX'
+title = 'AWX Project'
+description = 'AWX provides a web-based user interface, REST API, and task engine built on top of Ansible. Join the AWX discussion in the [Ansible Community Forum](https://forum.ansible.com/tag/awx).'
+website = 'https://github.com/ansible/awx'
+default_section = 'projects'
+usual_reporters = [
+  '@alancoding:ansible.im',
+  '@john-westcott-iv:ansible.im',
+  '@lyasin:matrix.org',
+  '@sfoster:matrix.org',
+  '@thedoubl3j:ansible.im',
+  '@therealhaoliu:matrix.org'
+]
+
+[[projects]]
+emoji = '🪜' # :ladder:
+name = 'maintainers'
+title = 'Maintainers'
+description = 'Maintainers help to run the community!'
+website = 'https://github.com/ansible-community'
+default_section = 'community'
+usual_reporters = []
+
+[[projects]]
+emoji = '⚡️' # :zap:
+name = 'core'
+title = 'Ansible-Core'
+description = "The `ansible-core` package contains the base engine and a small subset of modules and plugins. To see what's planned for the next release, look at the [`ansible-core` roadmaps](https://docs.ansible.com/projects/ansible-core/devel/roadmap/ansible_core_roadmap_index.html)."
+website = 'https://github.com/ansible/ansible'
+default_section = 'releases'
+usual_reporters = [
+  '@ansible-announce:matrix.org'
+]
+
+[[projects]]
+emoji = '📦️' # :package:
+name = 'ansible'
+title = 'Ansible Community Package'
+description = "The `Ansible` package includes `ansible-core` and is a batteries-included package that provides a curated set of Ansible collections. See the [Ansible roadmaps](https://docs.ansible.com/projects/ansible-core/devel/roadmap/ansible_core_roadmap_index.html) for future release plans."
+website = 'https://github.com/ansible-collections'
+default_section = 'releases'
+usual_reporters = []
+
+[[projects]]
+emoji = '⛏️' # :pick:
+name = 'devtools'
+title = 'DevTools'
+description = "Projects to make it easier to write and test Ansible Content. The [ansible-dev-tools](https://github.com/ansible/ansible-dev-tools) metapackage, which includes [VScode extension](https://github.com/ansible/vscode-ansible), [ansible-creator](https://github.com/ansible/ansible-creator), [ansible-lint](https://github.com/ansible-community/ansible-lint), [molecule](https://github.com/ansible-community/molecule), [ansible-navigator](https://github.com/ansible/ansible-navigator), [ansible-dev-environment)(https://github.com/ansible/ansible-dev-environment) and more! To see what's planned, and how you can help checkout the [foundation-devtools project board](https://github.com/orgs/ansible/projects/86/views/4)"
+website = 'https://github.com/ansible/ansible-dev-tools'
+default_section = 'projects'
+usual_reporters = []
+
+[[projects]]
+emoji = '🐂' # :ox:
+name = 'antsibull'
+title = 'Antsibull'
+description = "Tooling for building the `Ansible` package and collection documentation."
+website = 'https://github.com/ansible-community/antsibull'
+default_section = 'releases'
+usual_reporters = []
